@@ -1,0 +1,17 @@
+images = [
+
+{
+  id: 1,
+  image: "http://placekitten.com/500/400",
+},
+
+{
+  id: 2,
+  image: "http://placekitten.com/200/200"
+,}
+{
+  id: 3,
+  image: "http://placekitten.com/200/300"
+}
+
+]
