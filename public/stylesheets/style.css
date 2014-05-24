@@ -13,14 +13,6 @@
   text-align: center;
 }
 
-#imageForm{
-  vertical-align: middle;
-}
-
-input{
-  vertical-align: middle;
-}
-
 #containerThumbnail{
   display: none;
 }
@@ -65,6 +57,21 @@ input{
 }
 
 #imageList li img{
+  height: 100%;
+}
+
+#containerSingle{
+  display: none;
+  text-align: center;
+}
+
+#mainImageSingle{
+  border: 2px solid black;
+  text-align: center;
+  height: 80%;
+}
+
+#mainImageSingle img {
   height: 100%;
 }
 

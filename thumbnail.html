@@ -20,11 +20,15 @@
 
   <div id="configureWidget">
 
+    <input type="radio" name="widgetMode" value="thumbnail" checked="checked"> Thumbnail Mode
+    <input type="radio" name="widgetMode" value="single"> Single Mode
     <form id="imageForm"=>
       <input type="text" name="imageField" placeholder="Paste URL of image"><br>
     </form>
     <button onclick="addField()"> Add Field </button>
-    <button onclick="submitForm()"> Submit </button>
+    <button onclick="submitForm()"> Submit </button><br>
+    OR <br>
+    <button onclick="sample()"> Sample </button>
 
   </div>
 
