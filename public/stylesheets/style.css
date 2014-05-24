@@ -1,15 +1,71 @@
-.container{
-  width: 100%;
-  height: 100%;
-  margin: 0;
+#navbar {
+  text-align: center;
+  border: 2px solid black;
+}
+
+#navbar ul li{
+  display: inline-block;
+  padding: 30px;
+  border: 2px solid black;
+}
+
+#configureWidget{
+  text-align: center;
+}
+
+#imageForm{
+  vertical-align: middle;
+}
+
+input{
+  vertical-align: middle;
+}
+
+#containerThumbnail{
+  display: none;
 }
 
 #main{
   border: 2px solid black;
   float:left;
+  display: block;
+  height: 550px;
 }
 
-#imageList{
-  float: right;
+#mainImageThumbnail{
   border: 2px solid black;
+  width: 620px;
+  text-align: center;
+  height: 410px;
+  margin: 20px;
 }
+
+#mainImageThumbnail img {
+  height: 100%;
+}
+
+#mainButtons{
+  text-align: center;
+
+}
+
+#filmscroll{
+  border: 2px solid black;
+  padding: 0px 20px;
+  overflow: scroll;
+  height: 550px;
+  margin: 0px;
+}
+
+#imageList li{
+  text-align: center;
+  border: 2px solid black;
+  display: block;
+  height: 200px;
+}
+
+#imageList li img{
+  height: 100%;
+}
+
+

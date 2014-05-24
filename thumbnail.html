@@ -10,20 +10,43 @@
 </head>
 
 <body>
+
   <nav id="navbar">
     <ul>
-      <li></li>
-      <li></li>
+      <li onclick="thumbnailMode()">Thumbnail</li>
+      <li>Single Image</li>
     </ul>
   </nav>
-  <div id="container">
+
+  <div id="configureWidget">
+
+    <form id="imageForm"=>
+      <input type="text" name="imageField" placeholder="Paste URL of image"><br>
+    </form>
+    <button onclick="addField()"> Add Field </button>
+    <button onclick="submitForm()"> Submit </button>
+
+  </div>
+
+  <div id="containerThumbnail">
 
     <div id="main">
-      <button id="prevButton" onclick="prevImage();">Previous</button>
-      <button id="nextButton"onclick="nextImage();">Next</button>
+      <div id = "mainImageThumbnail">
+      </div>
+      <div id="mainButtons">
+      </div>
     </div>
-    <ul id="imageList">
-    </ul>
+
+    <div id="filmscroll">
+      <ul id="imageList">
+      </ul>
+    </div>
   </div>
+
+  <div id="containerSingle">
+    <div id="mainImageSingle">
+    </div>
+  </div>
+
 </body>
 </html>
