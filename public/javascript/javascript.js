@@ -29,7 +29,6 @@ window.onload = function (){
 
 //submit form with URL images
 function submitForm(){
-  hideWidgetConfig();
   var imagePlaceholder = [];
   var listedImage = document.getElementsByClassName('listedImage');
   for(var i = 0; i < listedImage.length; i++){
@@ -37,12 +36,22 @@ function submitForm(){
       imagePlaceholder.push({id: listedImage[i].firstChild.value, image: listedImage[i].lastChild.src});
     }
   };
+  console.log(imagePlaceholder.length);
+  if (imagePlaceholder.length === 0){
+    var error = document.createElement('li');
+    error.id = "error";
+    error.innerText = "Please select at least one photo";
+    document.getElementById('configureWidget').insertBefore(error, document.getElementById('configureWidget').firstChild);
+    return;
+  }
   
   if (document.querySelector('input[name="widgetMode"]:checked').value === "thumbnail"){
     thumbnailMode(imagePlaceholder);
   } else{
     singleMode(imagePlaceholder);
     };
+
+  hideWidgetConfig();
 };
 
 //thumbnail mode 
