@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Kevin Roger Teng</title>
   <script src="public/javascript/javascript.js"></script>
+  <script src="public/javascript/utilities.js"></script>
   <link rel ="stylesheet" type ="text/css" href="public/stylesheets/style.css">
 
 </head>
@@ -13,8 +14,8 @@
 
   <nav id="navbar">
     <ul>
-      <li>Thumbnail</li>
-      <li>Single Image</li>
+      <li>Kevin's Image Gallery</li>
+      <li id='navbar-right'> <a href="./index.html">Start Over </a><li>
     </ul>
   </nav>
 
@@ -22,13 +23,11 @@
 
     <input type="radio" name="widgetMode" value="thumbnail" checked="checked"> Thumbnail Mode
     <input type="radio" name="widgetMode" value="single"> Single Mode
-    <form id="imageForm"=>
-      <input type="text" name="imageField" placeholder="Paste URL of image"><br>
-    </form>
-    <button onclick="addField()"> Add Field </button>
-    <button onclick="submitForm()"> Submit </button><br>
-    OR <br>
-    <button onclick="sample()"> Sample </button>
+    <button onclick="submitForm()"> Submit </button>
+    <button onclick="checkAll()"> Check All </button>
+
+    <div id="imageSelection">
+    </div>
 
   </div>
 

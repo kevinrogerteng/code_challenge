@@ -1,16 +1,68 @@
+body{
+  background-color: #121211;
+  color: #fff;
+}
+
 #navbar {
-  text-align: center;
-  border: 2px solid black;
+  font-size: 30px;
+}
+
+#navbar ul{
 }
 
 #navbar ul li{
   display: inline-block;
-  padding: 30px;
-  border: 2px solid black;
+}
+
+#navbar ul li a:link{
+  text-decoration:none;
+}
+
+#navbar ul li a:visited{
+  color: #fff;
+  outline: none;
+}
+
+#navbar-right{
+  float:right;
 }
 
 #configureWidget{
   text-align: center;
+}
+#configureWidget button{
+  border-top: 2px solid #a3ceda;
+  border-left: 2px solid #a3ceda;
+  border-right: 2px solid #4f6267;
+  border-bottom: 2px solid #4f6267;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #c4f1fe;
+  font-weight: bold;
+  color: #2d525d;
+  cursor: pointer;
+  outline: none;
+}
+
+#configureWidget #imageSelection .listedImage {
+  display: inline-block;
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  margin: 10px; 
+  
+}
+
+#configureWidget #imageSelection .listedImage .checkbox { 
+  position: absolute; 
+  bottom: 0px; 
+  right: 0px; 
+}
+
+#configureWidget #imageSelection .listedImage img{
+  height: 200px;
+  width: 200px;
+
 }
 
 #containerThumbnail{
@@ -18,17 +70,15 @@
 }
 
 #main{
-  border: 2px solid black;
   float:left;
   display: block;
   height: 550px;
 }
 
 #mainImageThumbnail{
-  border: 2px solid black;
-  width: 620px;
+  width: 815px;
   text-align: center;
-  height: 410px;
+  height: 470px;
   margin: 20px;
 }
 
@@ -38,11 +88,22 @@
 
 #mainButtons{
   text-align: center;
+}
 
+#mainButtons button{
+  border-top: 2px solid #a3ceda;
+  border-left: 2px solid #a3ceda;
+  border-right: 2px solid #4f6267;
+  border-bottom: 2px solid #4f6267;
+  font-size: 14px;
+  background-color: #c4f1fe;
+  font-weight: bold;
+  color: #2d525d;
+  outline: none;
+  cursor: pointer;
 }
 
 #filmscroll{
-  border: 2px solid black;
   padding: 0px 20px;
   overflow: scroll;
   height: 550px;
@@ -51,9 +112,10 @@
 
 #imageList li{
   text-align: center;
-  border: 2px solid black;
   display: block;
-  height: 200px;
+  height: 180px;
+  padding: 20px;
+  cursor: pointer;
 }
 
 #imageList li img{
@@ -73,6 +135,7 @@
 
 #mainImageSingle img {
   height: 100%;
+  cursor: pointer;
 }
 
 
