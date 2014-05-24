@@ -1,3 +1,19 @@
+//main file for index.html
+function submitForm(){
+  hideWidgetConfig();
+  var inputs = document.getElementById("imageForm").children, imagePlaceholder =[];
+  for(var i = 0; i < inputs.length; i++){
+    if(inputs[i].value !== undefined && inputs[i].value !== ""){
+      imagePlaceholder.push({id: imagePlaceholder.length + 1, image: inputs[i].value});
+    }
+  };
+  if (document.querySelector('input[name="widgetMode"]:checked').value === "thumbnail"){
+    thumbnailMode(imagePlaceholder);
+  } else{
+    singleMode(imagePlaceholder);
+    };
+};
+
 function sample(){
     var imagePlaceholder = [
         {id: 1, image: 'https://s3.amazonaws.com/ooomf-com-files/ikZyw45kT4m16vHkHe7u_9647713235_29ce0305d2_o.jpg'},
@@ -11,6 +27,7 @@ function sample(){
     var imagesStringed = JSON.stringify(imagePlaceholder);
     //parse imagesStringed to make it into a JSON object
     var images = JSON.parse(imagesStringed);
+    hideWidgetConfig();
 
     if (document.querySelector('input[name="widgetMode"]:checked').value === "thumbnail"){
       thumbnailMode(imagePlaceholder);
@@ -18,20 +35,6 @@ function sample(){
       singleMode(imagePlaceholder);
       };
 }
-
-function submitForm(){
-  var inputs = document.getElementById("imageForm").children, imagePlaceholder =[];
-  for(var i = 0; i < inputs.length; i++){
-    if(inputs[i].value !== undefined && inputs[i].value !== ""){
-      imagePlaceholder.push({id: imagePlaceholder.length + 1, image: inputs[i].value});
-    }
-  };
-  if (document.querySelector('input[name="widgetMode"]:checked').value === "thumbnail"){
-    thumbnailMode(imagePlaceholder);
-  } else{
-    singleMode(imagePlaceholder);
-    };
-};
 
 function addField(){
   var form = document.getElementById("imageForm");
@@ -121,8 +124,12 @@ function singleMode(images){
   }
 };
 
-//utilities section
+//utility section 
 //create a function to set currentImage upon load
+
+function hideWidgetConfig (){
+  document.getElementById('configureWidget').style.display = "none";
+};
 
 function setCurrentImage(images){
   var onLoadcurrentImage = document.createElement("img"); 
