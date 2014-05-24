@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kevin Roger Teng</title>
+  <title>Gallery Widget Test</title>
   <script src="public/javascript/javascript.js"></script>
   <script src="public/javascript/utilities.js"></script>
   <link rel ="stylesheet" type ="text/css" href="public/stylesheets/style.css">
@@ -19,6 +19,7 @@
     </ul>
   </nav>
 
+<!-- user select mode and can check all -->
   <div id="configureWidget">
 
     <input type="radio" name="widgetMode" value="thumbnail" checked="checked"> Thumbnail Mode
@@ -26,11 +27,14 @@
     <button onclick="submitForm()"> Submit </button>
     <button onclick="checkAll()"> Check All </button>
 
+    <!-- images will be appended to imageSelection -->
+
     <div id="imageSelection">
     </div>
 
   </div>
 
+  <!-- container for thumbnail mode -->
   <div id="containerThumbnail">
 
     <div id="main">
@@ -46,6 +50,7 @@
     </div>
   </div>
 
+<!-- container for single mode -->
   <div id="containerSingle">
     <div id="mainImageSingle">
     </div>

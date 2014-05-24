@@ -1,5 +1,6 @@
 //utility section 
 
+//a current placeholder for images.
 function imagePlaceholder (){
    var imagePlaceholder = [
         {id: 1, image: 'https://s3.amazonaws.com/ooomf-com-files/ikZyw45kT4m16vHkHe7u_9647713235_29ce0305d2_o.jpg'},
@@ -22,6 +23,7 @@ function imagePlaceholder (){
     return imagePlaceholder;
 };
 
+//checks all checkboxes 
 function checkAll (){
   var listedImage = document.getElementsByClassName('listedImage')
   for(var i = 0; i < listedImage.length; i++){

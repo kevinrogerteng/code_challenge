@@ -1,5 +1,6 @@
 //main file for index.html
-
+//on load of window, add all images to main page with corresponding checkboxes.
+//can be changed for API use
 window.onload = function (){
   var images = imagePlaceholder();
   var imageList = document.getElementById("imageSelection");
@@ -37,6 +38,8 @@ function submitForm(){
     }
   };
   console.log(imagePlaceholder.length);
+
+  //validates if user has selected any photos
   if (imagePlaceholder.length === 0){
     var error = document.createElement('li');
     error.id = "error";
@@ -54,11 +57,13 @@ function submitForm(){
   hideWidgetConfig();
 };
 
-//thumbnail mode 
+//thumbnail mode, uses some functions on utilies.js file
 function thumbnailMode(images){
   document.getElementById("containerThumbnail").style.display = "block";
   var mainImageThumbnail = document.getElementById('mainImageThumbnail');
   mainImageThumbnail.appendChild(setCurrentImage(images));
+
+  //iterate over each image object to append to list
 
   images.forEach(function(el, index){
     var list = document.createElement("li");
@@ -75,27 +80,29 @@ function thumbnailMode(images){
     document.getElementById('imageList').appendChild(list);
   });
 
-  //create two buttons one for next and the other for previous
-
   var mainButtons = document.getElementById("mainButtons");
+
+  //create two buttons, one for next and the other for previous
+
   var nextButton = document.createElement("button");
+  nextButton.innerText = "Next";
+  var prevButton = document.createElement("button");
+  prevButton.innerText = "Previous"
 
   nextButton.onclick = function(){
     nextImage(mainImageThumbnail, images);//check utilities.js for this function
   }
 
-  var prevButton = document.createElement("button");
+  
   prevButton.onclick = function(){
     prevImage(mainImageThumbnail, images)//check utilities.js for this function
   };
 
-  nextButton.innerText = "Next";
-  prevButton.innerText = "Previous"
   mainButtons.appendChild(prevButton);
   mainButtons.appendChild(nextButton);
 };
 
-//singleMode
+//singleMode only uses the nextImage function
 
 function singleMode(images){
   document.getElementById("containerSingle").style.display = "block";
