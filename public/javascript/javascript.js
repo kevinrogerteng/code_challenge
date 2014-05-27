@@ -50,9 +50,12 @@ function submitForm(){
   
   if (document.querySelector('input[name="widgetMode"]:checked').value === "thumbnail"){
     thumbnailMode(imagePlaceholder);
-  } else{
+  } else if(document.querySelector('input[name="widgetMode"]:checked').value === "single"){
     singleMode(imagePlaceholder);
-    };
+  } else {
+    thumbnailMode(imagePlaceholder);
+    singleMode(imagePlaceholder);
+  };
 
   hideWidgetConfig();
 };

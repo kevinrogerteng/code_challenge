@@ -129,6 +129,7 @@ body{
 }
 
 #containerSingle{
+  margin: 10px;
   display: none;
   text-align: center;
 }
